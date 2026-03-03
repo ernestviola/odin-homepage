@@ -82,10 +82,10 @@ main {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  margin: 0px 80px;
 }
 
 section {
-  margin: 0px 40px;
 }
 
 .about {
@@ -115,12 +115,21 @@ section {
 
 .contact {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
 }
 
 .landscape {
-  width: 600px;
+  max-width: 500px;
 }
 
 .headshot {
-  width: 300px;
+  max-width: 200px;
+}
+
+@media screen and (max-width: 800px) {
+  main {
+    margin: 0px 25px;
+  }
 }
