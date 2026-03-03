@@ -73,3 +73,47 @@ h6 {
 #__next {
   isolation: isolate;
 }
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(106, 108, 132);
+}
+
+section {
+  max-width: 900px;
+}
+
+.about {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 2px 2px 8px 8px rgb(65, 67, 94);
+  display: flex;
+}
+
+.about > img {
+  position: relative;
+}
+
+.about > p {
+  float: left;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.project {
+  box-shadow: 2px 2px 8px 8px rgb(65, 67, 94);
+  padding: 25px;
+}
+
+.landscape {
+  width: 600px;
+}
+
+.headshot {
+  width: 400px;
+}
