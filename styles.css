@@ -79,6 +79,10 @@ h6 {
   isolation: isolate;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   position: relative;
   overflow-x: hidden;
@@ -91,7 +95,7 @@ body::before {
   height: 40vh;
   width: 140vw;
   z-index: -1;
-  transform: translate(-20vw, -30vh) rotate(-10deg);
+  transform: translate(-20vw, -15vh) rotate(-10deg);
 }
 
 main {
@@ -132,15 +136,17 @@ figure {
 }
 
 figcaption {
-  background-color: rgba(42, 42, 42, 0.431);
   color: white;
+  background-color: rgba(87, 87, 87, 0.346);
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  font-size: 36px;
+  font-size: 42px;
   font-weight: 600;
+  line-height: 1.2;
   text-align: center;
+  text-shadow: 2px 2px 5px var(--box-shadow);
 }
 
 figure > img {
@@ -169,12 +175,9 @@ figure > img {
   width: 100%;
 }
 
-.project > p {
-}
-
-.project__image {
-  background-color: rgb(80, 80, 199);
-  min-height: 220px;
+.project > img {
+  height: 300px;
+  object-fit: cover;
 }
 
 .contact {
