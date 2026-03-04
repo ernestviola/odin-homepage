@@ -82,25 +82,25 @@ body {
 body::before {
   content: '';
   position: absolute;
-  background-color: blue;
-  height: 500px;
-  width: 2000px;
+  background-color: rgb(65 143 175);
+  height: 40vh;
+  width: 140vw;
   z-index: -1;
-  transform: skew(80deg) translate(0px, 200px);
+  transform: translate(-20vw, -30vh) rotate(-10deg);
 }
 
 main {
-  gap: 30px;
+  padding: 0px 20px;
 }
 
 section {
   max-width: 900px;
   margin: 0 auto;
-  padding: 0px 20px;
 }
 
 footer {
-  background-color: rgb(153, 153, 246);
+  background-color: rgb(65 143 175);
+  padding: 25px;
 }
 
 footer > p {
@@ -109,19 +109,21 @@ footer > p {
 }
 
 .about {
+  box-shadow: 2px 2px 10px 3px rgb(106, 106, 106);
+  background-color: white;
   margin-top: 80px;
+  margin-bottom: 60px;
+  padding: 25px;
 }
 
 .about > div {
-  box-shadow: 2px 2px 10px 3px rgb(106, 106, 106);
-  background-color: white;
 }
 
 .about > img {
   box-shadow: 2px 2px 10px 3px rgb(106, 106, 106);
-  max-width: 300px;
+  max-width: 340px;
   float: left;
-  margin: -20px 25px 0px -3px;
+  margin: -55px 25px 0px -30px;
 }
 
 .about > div > p {
@@ -129,6 +131,7 @@ footer > p {
 }
 
 .work {
+  margin-bottom: 60px;
 }
 
 .projects {
@@ -149,24 +152,20 @@ footer > p {
 .project__image {
   background-color: rgb(80, 80, 199);
   min-height: 220px;
-  /* min-width: 250px; */
 }
 
 .contact {
+  background-color: rgb(65 143 175);
+  padding: 40px;
   max-width: 100%;
-  background-color: rgb(153, 153, 246);
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 40px;
 }
 
-.landscape {
+.contact > img {
   max-width: 500px;
-}
-
-.headshot {
-  max-width: 200px;
 }
 
 @media screen and (max-width: 1200px) {
