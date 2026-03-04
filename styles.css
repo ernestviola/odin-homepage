@@ -156,6 +156,17 @@ figure > img {
   margin: 25px 0;
 }
 
+.about__links {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 60px;
+  gap: 30px;
+}
+
+.about__links > a > img {
+  height: 40px;
+}
+
 .work {
   margin-bottom: 80px;
 }
@@ -177,6 +188,17 @@ figure > img {
   object-fit: cover;
   object-position: 50% 50%;
   margin: 0 auto;
+}
+
+.project__links {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-right: 25px;
+}
+
+.project__links > a > img {
+  height: 30px;
 }
 
 .contact {
