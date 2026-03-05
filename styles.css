@@ -321,20 +321,5 @@ figure > img {
 }
 
 .square {
-  height: 50px;
-  width: 50px;
-  background-color: red;
-  position: absolute;
-  top: 0;
-  animation: fall-and-rotate linear forwards;
-  z-index: -2;
-}
-
-@keyframes fall-and-rotate {
-  from {
-    transform: translateY(0) rotate(0deg);
-  }
-  to {
-    transform: translateY(var(--fall-distance)) rotate(720deg);
-  }
+  background-color: var(--primary-color);
 }
