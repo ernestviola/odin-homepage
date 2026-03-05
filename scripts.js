@@ -1,11 +1,15 @@
 let mouseX;
 let mouseY;
 
-const PAGE_HEIGHT = document.body.scrollHeight;
+let PAGE_HEIGHT = calculatePageHeight();
+
+window.addEventListener('resize', () => {
+  PAGE_HEIGHT = calculatePageHeight();
+});
 
 document.addEventListener('mousemove', (e) => {
-  mouseX = e.clientX;
-  mouseY = e.clientY;
+  mouseX = e.pageX;
+  mouseY = e.pageY;
 });
 
 const observer = new IntersectionObserver((entries) => {
@@ -50,6 +54,8 @@ setInterval(() => {
   document.body.appendChild(element);
 }, 1000);
 
+animate();
+
 function animate() {
   fallingObjects.forEach((obj) => {
     if (mouseX !== undefined && mouseY !== undefined) {
@@ -68,27 +74,11 @@ function animate() {
   requestAnimationFrame(animate);
 }
 
-animate();
-
-function spawnSquare() {
-  const square = document.createElement('div');
-  square.className = 'square';
-
-  const pageHeight = document.body.scrollHeight - 50;
-  square.style.setProperty('--fall-distance', `${pageHeight}px`);
-
-  const pageWidth = window.innerWidth * Math.random();
-  square.style.left = `${pageWidth}px`;
-
-  const duration = Math.random() * 4 + 15;
-  square.style.animationDuration = `${duration}s`;
-
-  square.addEventListener('animationend', () => {
-    square.remove();
-  });
-
-  document.body.appendChild(square);
-  return square;
+function calculatePageHeight() {
+  const lastSection = document.querySelector('footer');
+  return lastSection
+    ? lastSection.offsetTop + lastSection.offsetHeight
+    : document.body.scrollHeight;
 }
 
 class FallingObject {
