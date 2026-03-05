@@ -28,7 +28,7 @@ body {
     BlinkMacSystemFont,
     'Segoe UI',
     Roboto,
-      Oxygen,
+    Oxygen,
     Ubuntu,
     Cantarell,
     'Open Sans',
@@ -188,9 +188,18 @@ figure > img {
 }
 
 .project {
+  background-color: white;
   box-shadow: 0px 0px 3px 3px var(--box-shadow);
   padding: 20px;
   width: 100%;
+  transition: ease 1s;
+  transform: translateY(20px);
+  opacity: 0%;
+}
+
+.project-onscreen {
+  opacity: 100%;
+  transform: translateY(0);
 }
 
 .project > img {
@@ -300,5 +309,32 @@ figure > img {
 
   section {
     margin: 30px auto;
+  }
+}
+
+.icon {
+  transition: ease 0.2s;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+.square {
+  height: 50px;
+  width: 50px;
+  background-color: red;
+  position: absolute;
+  top: 0;
+  animation: fall-and-rotate linear forwards;
+  z-index: -2;
+}
+
+@keyframes fall-and-rotate {
+  from {
+    transform: translateY(0) rotate(0deg);
+  }
+  to {
+    transform: translateY(var(--fall-distance)) rotate(720deg);
   }
 }
